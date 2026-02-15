@@ -18,7 +18,7 @@ while keep_playing != "quit":
     if keep_playing == "yes" or "Yes" or "yeah" or "sure" or "ok" or "okay" or "alright":
         result_1 = random.choice(die_results)
         result_2 = random.choice(die_results)
-        if keep_playing != "no":
+        if keep_playing != "no" or "No":
             if (result_1 + result_2) == 2:
                 print(f"Ouch! You got the unfortunate double 1 for a total of 2! That's a Snake Eyes! Better luck next time!")
             elif (result_1 + result_2) == 3:
@@ -36,7 +36,7 @@ while keep_playing != "quit":
                 else:
                     print(f"You got a {result_1} & {result_2} for a total of 6!")
             elif (result_1 + result_2) == 7:
-                if result_1 == 1 or 6:
+                if (result_1 == 1) or (result_1 == 6): 
                     print(f"You got a {result_1} & {result_2} for a total of 7! That's a Six Ace!")
                 else:
                     print(f"You got a {result_1} & {result_2} for a total of 7!")
@@ -53,18 +53,12 @@ while keep_playing != "quit":
                 else:
                     print(f"You got a {result_1} & {result_2} for a total of 10!")
             elif (result_1 + result_2) == 11:
-                if result_1 == 6 or 5:
+                if (result_1 == 6) or (result_1 == 5):
                     print(f"You got a {result_1} & {result_2} for a total of 11! That's a Six Five no Jive!")
-                else:
-                    print(f"You got a {result_1} & {result_2} for a total of 11!")
             elif (result_1 + result_2) == 12:
                 if result_1 == 6:
                     print(f"Congrats! You got the lucky double 6 for a total of 12! That's a Boxcars! You're today's big winner!")
-                else:
-                    print(f"Congrats! You got a {result_1} & {result_2} for a total of 12!")
             
         else:
             print("See ya later!")
             break
-
-        
